@@ -27,6 +27,8 @@
                                 <% } %>
                             </select>
                         </div>
+
+
                          <div class="form-group">
                             <label for="fecha">Fecha:</label>
                             <input type="date" id="fecha" name="fecha" class="form-control">
@@ -38,12 +40,12 @@
 
                         <div class="form-group">
                             <label for="tipoEstado">Selecciona Estado:</label>
-                            <select id="tipoEstado" name="tipoEstado" class="form-control disenho_select">
+                            <select id="tipoEstado" name="tipoEstado" class="form-control">
                                 <option value="ESPERA">En espera</option>
                                 <option value="ATENDIDO">Atendido</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">Crear turno</button>
+                        <button type="submit" class="btn btn-primary">Agregar turno</button>
                     </form>
                 </fieldset>
             </div>

@@ -21,9 +21,9 @@ public class TurnoFormServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Recuperar la lista de ciudadanos
+
         List<Ciudadano> listaCiudadanos = ciudadanoController.findAll();
-        // Asegurarse de que la lista no esté vacía
+
         if (listaCiudadanos.isEmpty()) {
             request.setAttribute("error", "No hay ciudadanos registrados para asignar turnos.");
         }
@@ -33,7 +33,7 @@ public class TurnoFormServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // Validación de parámetros
+
         String fecha = req.getParameter("fecha");
         String descripcion = req.getParameter("descripcion");
         String estado = req.getParameter("tipoEstado");

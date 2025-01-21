@@ -18,6 +18,12 @@ CREATE TABLE turno (
     ciudadano_id BIGINT NOT NULL,
     FOREIGN KEY (ciudadano_id) REFERENCES ciudadano(id) ON DELETE CASCADE
 );
+--Crear la tabla usuarios para añadir usuarios
+CREATE TABLE usuarios (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nombre_usuario VARCHAR(50) NOT NULL UNIQUE,
+    contrasenia VARCHAR(50) NOT NULL
+);
 
 -- Insertar registros en la tabla persona
 INSERT INTO ciudadano (nombre, apellido) VALUES

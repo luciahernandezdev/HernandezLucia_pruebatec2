@@ -17,11 +17,11 @@ public class TurnoServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
-        //Obtiene la lista completa de turnos
+
         List<Turno> turnos = turnoController.findAll();
 
         request.setAttribute("turnos", turnos);
-        // Redirige al JSP
+
         request.getRequestDispatcher("turno.jsp").forward(request, resp);
     }
 
@@ -30,7 +30,7 @@ public class TurnoServlet extends HttpServlet {
         String estado = request.getParameter("tipoEstado");
         String fecha = request.getParameter("fecha");
 
-        //Filtra los turnos
+
         List<Turno> turnosFiltrados = turnoController.filtrarTurno(estado, fecha);
 
         request.setAttribute("turnos", turnosFiltrados);

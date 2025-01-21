@@ -7,7 +7,6 @@ import java.util.Set;
 @Entity
 public class Ciudadano {
 
-    //Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,14 +17,14 @@ public class Ciudadano {
     @Column(nullable = false)
     private String apellido;
 
-    //Un ciudadano tiene varios turnos
+
     @OneToMany(mappedBy = "ciudadano",
             fetch = FetchType.EAGER,
             cascade = CascadeType.ALL,
             orphanRemoval = true)
     private Set<Turno> turnos = new HashSet<>();
 
-    //Constructores
+
     public Ciudadano() {
     }
 

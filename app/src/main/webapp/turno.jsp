@@ -35,7 +35,7 @@
                 <tr>
                     <th>Nombre completo</th>
                     <th>Descripción</th>
-                    <th>Fecha del Turno</th>
+                    <th>Fecha</th>
                     <th>Estado</th>
                 </tr>
             </thead>
