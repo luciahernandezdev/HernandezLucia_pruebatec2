@@ -1,0 +1,51 @@
+.title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    outline: none;
+}
+
+.filter-form {
+    margin-bottom: 30px;
+}
+.turnos-table {
+    width: 100%;
+    margin-top: 20px;
+}
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
