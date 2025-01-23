@@ -26,6 +26,10 @@ public class Turno {
         ATENDIDO;
     }
 
+    /**
+     *Establece la relcion de muchos a uno con la entidad ciudadano,
+     * asegurando que ciudadano_id no sea nula en la bbdd y que se cargue de inmediato.
+     */
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ciudadano_id", nullable = false)
     private Ciudadano ciudadano;

@@ -6,6 +6,11 @@ import com.example.persistence.GenericoJPA;
 import java.util.List;
 
 public class CiudadanoController {
+    /**
+     * Define el controlador CiudadanoController para gestionar operaciones con la entidad
+     * ciudadano. Utiliza GenericoJPA para realizar operaciones CRUD.
+     * El método findAll permite obtener una lista de todos los ciudadanos.
+     */
     private final GenericoJPA<Ciudadano, Long> genericoJPA;
 
     public CiudadanoController() {

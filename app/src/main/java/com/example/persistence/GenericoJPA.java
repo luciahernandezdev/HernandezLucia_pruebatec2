@@ -3,8 +3,15 @@ package com.example.persistence;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import java.util.List;
+import java.util.Optional;
 
 public class GenericoJPA<T, ID> {
+
+    /**
+     * Se usa JPA para realizar operaciones CRUD sobre cualquier tipo de entidad,
+     * crea una entidad, obtiene todas las entidades, encuentra una entidad por su ID,
+     * actualiza una entidad existente y elimina una entidad por su ID.
+     */
     private final Class<T> entityClass;
 
     public GenericoJPA(Class<T> entityClass) {
@@ -37,6 +44,19 @@ public class GenericoJPA<T, ID> {
             em.close();
         }
     }
+
+    public Optional<T> findOne(Integer id){
+        EntityManager em = ConfigJPA.getEntityManagerFactory();
+        try {
+            return Optional.ofNullable(em.find(this.entityClass,id));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+            em.close();
+        }
+        return Optional.empty();
+    }
+
 
     public void update(T entity) {
         EntityManager em = ConfigJPA.getEntityManagerFactory();

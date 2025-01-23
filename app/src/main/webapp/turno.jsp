@@ -34,6 +34,7 @@
             <thead class="thead-dark">
                 <tr>
                     <th>Nombre completo</th>
+                    <th>Turno</th>
                     <th>Descripción</th>
                     <th>Fecha</th>
                     <th>Estado</th>
@@ -50,8 +51,12 @@
                 %>
                 <tr>
                     <td>
-                        <%= turno.getCiudadano().getNombre() %> <%= turno.getCiudadano().getApellido() %>
+                        <%= turno.getCiudadano().getNombre() %>
+                        <%= turno.getCiudadano().getApellido() %>
                     </td>
+                     <td>
+                          000000-0000<%=turno.getId() %>
+                     </td>
                     <td>
                         <%= turno.getDescripcion() %>
                     </td>
