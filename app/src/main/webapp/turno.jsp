@@ -55,7 +55,7 @@
                         <%= turno.getCiudadano().getApellido() %>
                     </td>
                      <td>
-                          000000-0000<%=turno.getId() %>
+                          0000<%=turno.getId() %>
                      </td>
                     <td>
                         <%= turno.getDescripcion() %>
